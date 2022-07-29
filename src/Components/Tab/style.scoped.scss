@@ -1,0 +1,27 @@
+.tab {
+    display: flex;
+    width: 99%;
+    margin: 0 0 5px -10px;
+    padding: 5px 0 5px 10px;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+    border-radius: 0 3px 3px 0;
+
+    &:hover {
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+.image {
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(116deg)
+        brightness(109%) contrast(109%);
+    width: 20px;
+    height: 20px;
+}
+
+.text {
+    font-size: 14px;
+    margin-left: 10px;
+}

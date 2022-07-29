@@ -1,0 +1,61 @@
+.playlist {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-grow: 1;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+
+    .wrapper {
+        width: 90%;
+        margin-top: 10px;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    .page-name {
+        font-size: 48px;
+        margin-right: 20px;
+    }
+
+    .playlist-counter {
+        align-self: flex-end;
+        font-size: 30px;
+    }
+}
+
+.main {
+    display: flex;
+}
+
+.left-bar-info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-right: 50px;
+}
+
+.right-bar-tracks {
+    width: 100%;
+
+    .search-bar {
+        margin-bottom: 30px;
+    }
+
+    .tracks-list {
+        display: flex;
+        flex-direction: column;
+    }
+}

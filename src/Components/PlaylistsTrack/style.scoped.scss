@@ -1,0 +1,39 @@
+.track-item {
+    $size: 40px;
+
+    width: 100%;
+    height: $size;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba($color: #fff, $alpha: 0.1);
+    border-radius: 8px;
+    margin-bottom: 15px;
+
+    .name {
+        padding-left: 25px;
+        font-size: 18px;
+    }
+
+    .button-remove {
+        height: $size;
+        width: $size;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(254, 127, 1, 0.6);
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        transition: 0.3s;
+
+        img {
+            width: 15px;
+            height: 15px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(254, 127, 1, 1);
+        }
+    }
+}

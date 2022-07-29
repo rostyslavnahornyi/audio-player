@@ -1,0 +1,107 @@
+.playlist-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    min-height: 250px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+    word-break: break-all;
+    background-color: #131316;
+    border-radius: 20px;
+    transition: 0.5s;
+
+    .icon {
+        position: absolute;
+        display: flex;
+        width: 35%;
+        height: 35%;
+        z-index: 1;
+        transition: 0.35s;
+        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(116deg)
+            brightness(109%) contrast(109%);
+    }
+
+    p {
+        transition: 0.5s;
+        user-select: none;
+        opacity: 0;
+    }
+
+    .name {
+        font-size: 36px;
+    }
+
+    &::before {
+        top: 0;
+        content: "Hover here";
+        width: 100%;
+        height: 20px;
+        display: flex;
+        color: #000;
+        justify-content: center;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        opacity: 1;
+        transition: 0.3s;
+
+        background-color: rgb(89, 215, 89);
+        position: absolute;
+    }
+
+    &::after {
+        bottom: 0;
+        content: "Click to edit";
+        width: 100%;
+        height: 20px;
+        display: flex;
+        color: #000;
+        justify-content: center;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        opacity: 0;
+        transition: 0.3s;
+
+        background-color: rgb(254, 127, 1);
+        position: absolute;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        p {
+            opacity: 1;
+        }
+
+        .icon {
+            opacity: 0;
+        }
+
+        &::before {
+            opacity: 0;
+        }
+
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+.playlist-edit {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.playlist-edit-visible {
+    bottom: -110px;
+    opacity: 1;
+}

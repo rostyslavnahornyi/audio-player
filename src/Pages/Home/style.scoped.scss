@@ -1,0 +1,67 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-grow: 1;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+
+    .wrapper {
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .separator {
+        margin: 50px 0;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    .page-name {
+        font-size: 54px;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+
+    .box {
+        width: 250px;
+        height: 250px;
+        border: 1px solid white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 34px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .button-tracks {
+        background-image: url("../../assets/track_icon.svg");
+        background-size: 25px 25px;
+    }
+
+    .button-playlists {
+        background-image: url("../../assets/playlist_icon_2.svg");
+        background-size: 25px 25px;
+
+    }
+}

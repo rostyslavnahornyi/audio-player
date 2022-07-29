@@ -1,0 +1,76 @@
+$filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(116deg)
+    brightness(109%) contrast(109%);
+
+.profile-data {
+    display: flex;
+}
+
+.avatar {
+    width: 150px;
+    display: flex;
+    position: relative;
+    margin-right: 50px;
+
+    &:hover {
+        .visible {
+            filter: invert(48%) sepia(3%) saturate(4%) hue-rotate(326deg)
+                brightness(110%) contrast(78%);
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        .upload-icon {
+            opacity: 1;
+        }
+    }
+
+    .avatar-icon {
+        border-radius: 50%;
+        width: 130px;
+        height: 130px;
+        transition: 0.4s;
+    }
+
+    .upload-icon {
+        display: flex;
+        position: absolute;
+        filter: $filter;
+        height: 50px;
+        width: 50px;
+        left: 40px;
+        top: 40px;
+        opacity: 0;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+
+    .name {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .middot {
+        width: 10px;
+        height: 10px;
+        filter: $filter;
+        margin: 0 10px;
+    }
+
+    p {
+        letter-spacing: 3px;
+    }
+
+    .buttons {
+        display: flex;
+        margin-top: 20px;
+
+        div {
+            margin-right: 20px;
+        }
+    }
+}
